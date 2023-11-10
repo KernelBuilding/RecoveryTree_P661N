@@ -69,7 +69,8 @@ BOARD_KERNEL_TAGS_OFFSET := 0x07c08000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user
-#BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
+BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/11230000.mmc
 #BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery  # TODO: Used in other device tree. Do we need it?
 
 # Args
@@ -170,7 +171,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := perilouspike-beta1
+TW_DEVICE_VERSION := perilouspike-beta2
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
@@ -179,7 +180,7 @@ TW_NO_SCREEN_BLANK := true
 TW_HAS_MTP := true
 
 # Excludes
-#TW_EXCLUDE_APEX := true
+TW_EXCLUDE_APEX := true
 TW_EXCLUDE_NANO := true
 TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_TWRP_APP := true
