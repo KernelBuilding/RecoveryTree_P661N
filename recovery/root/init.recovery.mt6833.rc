@@ -4,8 +4,8 @@ import /trustonic.rc
 on init
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
     
-    mkdir /mnt/vendor/persist 0700 root root
-    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+    #mkdir /mnt/vendor/persist 0700 root root
+    #mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
 
 on fs
     #on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
@@ -101,6 +101,14 @@ service mobicore /system/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry 
     disabled
     seclabel u:r:recovery:s0
 
+service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
 service keystore_auth /system/bin/keystore_auth
     oneshot
     user system
@@ -134,6 +142,7 @@ on fs && property:ro.debuggable=0
 
 on post-fs
     start boot-hal-1-2
+    start mtk.plpath.utils.link
 
     # Support A/B feature for EMMC and UFS boot region
     wait /dev/block/mmcblk0boot0 2
