@@ -12,5 +12,3 @@ product                                    /product         ext4                
 /dev/block/by-name/misc /misc emmc defaults defaults
 
 /dev/block/by-name/boot /boot emmc defaults first_stage_mount,nofail,slotselect
-
-/dev/block/by-name/persist /mnt/vendor/persist ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc wait,check,formattable,first_stage_mount
