@@ -1,9 +1,17 @@
-#
 # Copyright (C) 2023 The Android Open Source Project
-# Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
+# Copyright (C) 2023 TeamWin Recovery Project
 #
-# SPDX-License-Identifier: Apache-2.0
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 LOCAL_PATH := device/infinix/X666B
 
@@ -58,33 +66,21 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
-   #libhealthd.$(PRODUCT_PLATFORM)
 
 # Boot Control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-mtkimpl \
     android.hardware.boot@1.2-mtkimpl.recovery
-    #android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.2-impl \
-    android.hidl.base@1.0
-
 
 PRODUCT_PACKAGES += \
     bootctrl.mt6833 \
     bootctrl.mt6833.recovery
-    #libgptutils \
-    libz \
-    libcutils
 
 # Fastbootd
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
-    #android.hardware.fastboot@1.0-impl-mock.recovery
+    android.hardware.fastboot@1.0-impl-mock.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
@@ -97,9 +93,6 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload \
     checkpoint_gc
-    #otapreopt_script \
-    cppreopts.sh
-
 
 # Recovery modules
 TARGET_RECOVERY_DEVICE_MODULES += \
@@ -108,7 +101,6 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster41 \
     libtrustonic_keybox_ca \
     libimsg_log
-    #libpuresoftkeymasterdevice
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libresetprop.so \
@@ -116,7 +108,3 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libtrustonic_keybox_ca.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libimsg_log.so
-    #$(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
-    
-#TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.1.so
