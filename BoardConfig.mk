@@ -55,17 +55,6 @@ TARGET_BOOTLOADER_BOARD_NAME := CY-X666-P740AE
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    system \
-    vendor \
-    product \
-    system_ext \
-    boot \
-    vbmeta_vendor \
-    vbmeta_system
-
 # Kernel
 TARGET_KERNEL_ARCH := $(TARGET_ARCH)
 BOARD_KERNEL_PAGESIZE := 2048
@@ -131,6 +120,11 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Fstab Path
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
+# Copy fstab to ensure the first stage boot mounts everything we need.
+PRODUCT_COPY_FILES += $(DEVICE_PATH)/fstab.$(TARGET_BOARD_PLATFORM):$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(TARGET_BOARD_PLATFORM)
+PRODUCT_COPY_FILES += $(DEVICE_PATH)/fstab.$(TARGET_BOARD_PLATFORM):$(TARGET_COPY_OUT_RECOVERY)/root/vendor/etc/fstab.$(TARGET_BOARD_PLATFORM)
+PRODUCT_COPY_FILES += $(DEVICE_PATH)/fstab.$(TARGET_BOARD_PLATFORM):$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(TARGET_BOARD_PLATFORM)
+
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
@@ -185,12 +179,9 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_NO_SCREEN_BLANK := true
 TW_HAS_MTP := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
-#TW_EXTRA_LANGUAGES := true
-#TW_INCLUDE_NTFS_3G := true
-#TW_PREPARE_DATA_MEDIA_EARLY := true
+TW_EXTRA_LANGUAGES := true
+TW_INCLUDE_NTFS_3G := true
 TARGET_USES_MKE2FS := true
-#TW_INCLUDE_FASTBOOTD := true
-#TW_FRAMERATE := 60
 TW_HAS_NO_RECOVERY_PARTITION := true
 
 # Excludes
@@ -223,8 +214,3 @@ TW_CUSTOM_CLOCK_POS := 60
 
 # Maintainer/Version
 TW_DEVICE_VERSION := perilouspike
-
-# Copy fstab to ensure the first stage boot mounts everything we need.
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/fstab.$(TARGET_BOARD_PLATFORM):$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(TARGET_BOARD_PLATFORM)
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/fstab.$(TARGET_BOARD_PLATFORM):$(TARGET_COPY_OUT_RECOVERY)/root/vendor/etc/fstab.$(TARGET_BOARD_PLATFORM)
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/fstab.$(TARGET_BOARD_PLATFORM):$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(TARGET_BOARD_PLATFORM)

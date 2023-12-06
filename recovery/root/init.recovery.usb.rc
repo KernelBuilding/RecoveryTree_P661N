@@ -28,7 +28,7 @@
 on early-init
     write /sys/module/musb_hdrc/parameters/kernel_init_done 1
 
-on init
+on boot
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 1
     setprop vendor.usb.controller "musb-hdrc"
@@ -38,7 +38,10 @@ on init
     setprop vendor.usb.acm_enable 0
     #SDD:add OTG feature for TESSCR-6368 by weike.xu 20210512 start
     chmod 0666 /sys/devices/platform/odm/odm:tran_battery/OTG_CTL
+    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL "1"
     #SDD:add OTG feature for TESSCR-6368 by weike.xu 20210512 end
+    # for usb otg sdcard hot plug detection
+    write /sys/module/block/parameters/events_dfl_poll_msecs 1000
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}

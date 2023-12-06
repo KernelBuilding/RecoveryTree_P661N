@@ -18,7 +18,18 @@ LOCAL_PATH := device/infinix/X666B
 # Platform
 PRODUCT_PLATFORM := mt6833
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# API level
+PRODUCT_SHIPPING_API_LEVEL := 31
+
+# Virtual A/B
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 # Virtual A/B Partition 
+AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
@@ -46,22 +57,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
-# Virtual A/B
-ENABLE_VIRTUAL_AB := true
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
-# Dynamic Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# VNDK
-#PRODUCT_TARGET_VNDK_VERSION := 31
-
-# API
-PRODUCT_SHIPPING_API_LEVEL := 31
-
 # Health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -77,7 +72,7 @@ PRODUCT_PACKAGES += \
     bootctrl.mt6833.recovery
 
 # Fastbootd
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
