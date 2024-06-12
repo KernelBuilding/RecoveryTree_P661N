@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/infinix/X666B
+LOCAL_PATH := device/itel/P661N
 
 # Platform
 PRODUCT_PLATFORM := mt6833
@@ -22,7 +22,7 @@ PRODUCT_PLATFORM := mt6833
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # API level
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
@@ -32,22 +32,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
-    dtbo \
-    gz \
-    lk \
-    logo \
-    md1img \
-    preloader \
-    product \
-    scp \
-    spmfw \
-    sspm \
     system \
-    system_ext \
-    tee \
-    vbmeta \
-    vbmeta_system \
-    vbmeta_vendor \
     vendor
     
 # A/B
