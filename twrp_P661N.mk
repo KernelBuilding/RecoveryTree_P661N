@@ -27,16 +27,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from Infinix-X666B device
-$(call inherit-product, device/infinix/X666B/device.mk)
+$(call inherit-product, device/itel/P661N/device.mk)
 
 # Device Target Name
-PRODUCT_RELEASE_NAME := X666B
+PRODUCT_RELEASE_NAME := P661N
 
-PRODUCT_DEVICE := X666B
-PRODUCT_NAME := twrp_X666B
-PRODUCT_BRAND := Infinix
-PRODUCT_MODEL := X666B
-PRODUCT_MANUFACTURER := infinix
+PRODUCT_DEVICE := P661N
+PRODUCT_NAME := twrp_P661N
+PRODUCT_BRAND := Itel
+PRODUCT_MODEL := P661N
+PRODUCT_MANUFACTURER := ITEL
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
 
