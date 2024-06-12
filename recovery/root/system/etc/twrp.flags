@@ -1,0 +1,45 @@
+# mount point   fstype            device             device2                 flags
+/boot            emmc    /dev/block/by-name/boot               flags=backup=1;display="Boot";flashimg=1;slotselect
+/bootloader      emmc    /dev/block/by-name/lk                 flags=display="Bootloader";backup=1;slotselect
+/dtbo            emmc    /dev/block/by-name/dtbo               flags=backup=1;display="Dtbo";flashimg=1;slotselect
+
+# Dynamic Partition (SUPER)
+/super	         emmc    /dev/block/by-name/super              flags=backup=0;display="Super";flashimg=1
+
+# AVB partition
+/vbmeta          emmc    /dev/block/by-name/vbmeta             flags=display="Vbmeta";flashimg=1;backup=1;slotselect
+/vbmeta_system   emmc    /dev/block/by-name/vbmeta_system      flags=backup=1;display="Vbmeta_system";flashimg=1;slotselect
+/vbmeta_vendor   emmc    /dev/block/by-name/vbmeta_vendor      flags=backup=1;display="Vbmeta_vendor";flashimg=1;slotselect
+
+# MediaTek partition (IMEI and MODEM)
+/protect_f       emmc    /dev/block/by-name/protect1           flags=backup=1;display="protect_f";flashimg=1
+/protect_s       emmc    /dev/block/by-name/protect2           flags=backup=1:display="protect_s";flashimg=1
+/nvdata          emmc    /dev/block/by-name/nvdata             flags=backup=1;display="nvdata";flashimg=1
+/nvram           emmc    /dev/block/by-name/nvram              flags=backup=1;display="nvram";flashimg=1
+/nvcfg           emmc    /dev/block/by-name/nvcfg              flags=backup=1;display="nvcfg";flashimg=1
+/proinfo         emmc    /dev/block/by-name/proinfo            flags=backup=1;display="proinfo"
+
+# Other
+/persistent      emmc    /dev/block/by-name/frp
+/persist         ext4    /dev/block/by-name/persist            flags=backup=1;display="Persist"
+
+# storage
+/data           f2fs     /dev/block/by-name/userdata
+
+# Other Partition
+/boot_para       emmc    /dev/block/by-name/boot_para
+/logo            emmc    /dev/block/by-name/logo               flags=backup=1;display="Logo";flashimg=1;slotselect
+/seccfg          emmc    /dev/block/by-name/seccfg
+/vendor_boot     emmc    /dev/block/by-name/vendor_boot        flags=display="Vendor Boot";flashimg=1;backup=1;slotselect
+/tranfs          ext4    /dev/block/by-name/tranfs             flags=display="tranfs"
+/spmfw           emmc    /dev/block/by-name/spmfw              flags=slotselect;
+
+# Dynamic Partitions ( A Slots )
+/product_a          emmc      /dev/block/mapper/product_a               flags=display="Product Image";backup=0;flashimg=1
+/system_a           emmc      /dev/block/mapper/system_a                flags=display="System Image";backup=1;flashimg=1
+/system_ext_a       emmc      /dev/block/mapper/system_ext_a            flags=display="System_ext Image";backup=0;flashimg=1
+/vendor_a           emmc      /dev/block/mapper/vendor_a                flags=display="Vendor Image";backup=1;flashimg=1
+
+# Removable storage
+/external_sd     auto     /dev/block/mmcblk0p1    /dev/block/mmcblk0   flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg         auto     /dev/block/sdd1         /dev/block/sdd       flags=display="Usb-Otg";storage;wipeingui;removable
