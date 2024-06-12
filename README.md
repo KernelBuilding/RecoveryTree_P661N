@@ -21,4 +21,5 @@ The Itel P55 5G (codenamed: _P661N_) is a low-entry smartphone launched in 26 Se
 
 ## Itel P55 5G
 
-![image](https://m.gsmarena.com/itel_p55_5g-pictures-12604.php)
+![image](https://fdn2.gsmarena.com/vv/pics/itel/itel-power-55-2.jpg)
+
