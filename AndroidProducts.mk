@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_X666B.mk
+    $(LOCAL_DIR)/twrp_P661N.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_X666B-eng
+    twrp_P661N-eng
