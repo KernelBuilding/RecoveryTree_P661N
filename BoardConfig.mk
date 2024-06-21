@@ -180,7 +180,6 @@ TW_HAS_MTP := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
-TARGET_USES_MKE2FS := true
 TW_HAS_NO_RECOVERY_PARTITION := true
 
 # Excludes
