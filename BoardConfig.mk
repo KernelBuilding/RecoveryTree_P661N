@@ -210,5 +210,9 @@ TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS := 480
 TW_CUSTOM_CLOCK_POS := 60
 
+# Fix Battery Accurate
+BOARD_HAS_NO_REAL_BATTERY := false
+TW_INCLUDE_BATTERY_TEN := true
+
 # Maintainer/Version
 TW_DEVICE_VERSION := ProjectKernel2
