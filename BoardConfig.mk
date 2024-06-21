@@ -207,7 +207,7 @@ TARGET_USES_LOGD := true
 
 # Statusbar icon flags
 TW_STATUS_ICONS_ALIGN := center
-TW_CUSTOM_CPU_POS := 580
+TW_CUSTOM_CPU_POS := 480
 TW_CUSTOM_CLOCK_POS := 60
 
 # Maintainer/Version
