@@ -59,7 +59,7 @@ BOARD_KERNEL_IMAGE_NAME := kernel
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user
 BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
-BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/11270000.ufshci 
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=bootdevice,soc/11230000.mmc,11230000.mmc,soc/11230000.msdc,11230000.msdc,soc/11270000.ufshci,11270000.ufshci
 # BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery  # TODO: Used in other device tree. Do we need it?
 
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
