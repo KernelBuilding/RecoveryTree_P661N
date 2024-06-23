@@ -42,4 +42,4 @@
 
 # Removable storage
 /external_sd     auto     /dev/block/mmcblk0p1    /dev/block/mmcblk0   flags=display="Micro SDcard";storage;wipeingui;removable
-/usb-otg         auto     /dev/block/sdd1         /dev/block/sdd       flags=display="Usb-Otg";storage;wipeingui;removable
+/usb_otg         auto     /dev/block/sdd1         /dev/block/sdd       flags=display="Usb-Otg";storage;wipeingui;removable
