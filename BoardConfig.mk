@@ -201,8 +201,7 @@ TW_DEFAULT_BRIGHTNESS := 500
 TW_MAX_BRIGHTNESS := 2047
 
 # Fix Battery Accurate
-TW_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery/capacity"
-TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
+TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery/capacity"
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone1/temp"
 
 # Debug
