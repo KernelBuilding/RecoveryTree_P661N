@@ -4,13 +4,13 @@
 /dev/block/by-name/misc         /misc         emmc   defaults   defaults
 
 # Core Partitions (ext4)
-system             /system         ext4    ro           wait,slotselect,logical
+system             /system         ext4    rw           wait,slotselect,logical
 system_ext         /system_ext     ext4    ro           wait,slotselect,logical
 product            /product        ext4    ro           wait,slotselect,logical
 vendor             /vendor         ext4    ro           wait,slotselect,logical
 
 # Core Partitions (erofs)
-system             /system         erofs   ro           wait,slotselect,logical
+system             /system         erofs   rw           wait,slotselect,logical
 system_ext         /system_ext     erofs   ro           wait,slotselect,logical
 product            /product        erofs   ro           wait,slotselect,logical
 vendor             /vendor         erofs   ro           wait,slotselect,logical
