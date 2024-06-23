@@ -34,11 +34,11 @@
 /tranfs          ext4    /dev/block/by-name/tranfs             flags=display="tranfs"
 /spmfw           emmc    /dev/block/by-name/spmfw              flags=slotselect;
 
-# Dynamic Partitions ( A Slots )
-/product          emmc      /dev/block/mapper/product                 flags=display="Product Image";backup=0;flashimg=1
-/system           emmc      /dev/block/mapper/system                  flags=display="System Image";backup=1;flashimg=1
-/system_ext       emmc      /dev/block/mapper/system_ext              flags=display="System_ext Image";backup=0;flashimg=1
-/vendor           emmc      /dev/block/mapper/vendor                  flags=display="Vendor Image";backup=1;flashimg=1
+# Dynamic Partitions ( A/B Slots )
+/product          emmc      /dev/block/mapper/product                 flags=display="Product Image";backup=0;flashimg=1;slotselect
+/system           emmc      /dev/block/mapper/system                  flags=display="System Image";backup=1;flashimg=1;slotselect
+/system_ext       emmc      /dev/block/mapper/system_ext              flags=display="System_ext Image";backup=0;flashimg=1;slotselect
+/vendor           emmc      /dev/block/mapper/vendor                  flags=display="Vendor Image";backup=1;flashimg=1;slotselect
 
 # Removable storage
 /external_sd     auto     /dev/block/mmcblk0p1    /dev/block/mmcblk0   flags=display="Micro SDcard";storage;wipeingui;removable
