@@ -35,10 +35,10 @@
 /spmfw           emmc    /dev/block/by-name/spmfw              flags=slotselect;
 
 # Dynamic Partitions ( A Slots )
-/product_a          emmc      /dev/block/mapper/product_a               flags=display="Product Image";backup=0;flashimg=1
-/system_a           emmc      /dev/block/mapper/system_a                flags=display="System Image";backup=1;flashimg=1
-/system_ext_a       emmc      /dev/block/mapper/system_ext_a            flags=display="System_ext Image";backup=0;flashimg=1
-/vendor_a           emmc      /dev/block/mapper/vendor_a                flags=display="Vendor Image";backup=1;flashimg=1
+/product          emmc      /dev/block/mapper/product                 flags=display="Product Image";backup=0;flashimg=1
+/system           emmc      /dev/block/mapper/system                  flags=display="System Image";backup=1;flashimg=1
+/system_ext       emmc      /dev/block/mapper/system_ext              flags=display="System_ext Image";backup=0;flashimg=1
+/vendor           emmc      /dev/block/mapper/vendor                  flags=display="Vendor Image";backup=1;flashimg=1
 
 # Removable storage
 /external_sd     auto     /dev/block/mmcblk0p1    /dev/block/mmcblk0   flags=display="Micro SDcard";storage;wipeingui;removable
