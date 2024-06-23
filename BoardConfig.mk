@@ -201,7 +201,6 @@ TW_DEFAULT_BRIGHTNESS := 500
 TW_MAX_BRIGHTNESS := 2047
 
 # Fix Battery Accurate
-BOARD_HAS_NO_REAL_BATTERY := false
 TW_INCLUDE_BATTERY_TEN := true
 TW_BATTERY_PATH := "/sys/class/power_supply/battery/capacity"
 
