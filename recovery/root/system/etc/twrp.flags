@@ -36,7 +36,7 @@
 
 # Dynamic Partitions ( A/B Slots )
 /product          emmc      /dev/block/mapper/product_a    /dev/block/mapper/product_b                 flags=display="Product Image";backup=1;flashimg=1
-/system_root      emmc      /dev/block/mapper/system_a     /dev/block/mapper/system_b                  flags=display="System Image";backup=1;flashimg=1
+/system           emmc      /dev/block/mapper/system_a     /dev/block/mapper/system_b                  flags=display="System Image";backup=1;flashimg=1
 /system_ext       emmc      /dev/block/mapper/system_ext_a /dev/block/mapper/system_ext_b              flags=display="System_ext Image";backup=1;flashimg=1
 /vendor           emmc      /dev/block/mapper/vendor_a     /dev/block/mapper/vendor_b                  flags=display="Vendor Image";backup=1;flashimg=1
 
