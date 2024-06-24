@@ -215,3 +215,9 @@ TW_CUSTOM_CLOCK_POS := 60
 
 # Maintainer/Version
 TW_DEVICE_VERSION := ProjectKernel2
+MAINTAINER := 'ProjectKernel2'
+
+# PBRP Specific Build Flags
+PB_DISABLE_DEFAULT_TREBLE_COMP := false
+PB_TORCH_PATH := "/sys/class/torch/torch/torch_level"
+PB_DISABLE_DEFAULT_DM_VERITY := false
