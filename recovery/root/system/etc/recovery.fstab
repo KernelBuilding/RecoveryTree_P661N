@@ -8,13 +8,13 @@ system             /system         erofs   ro                             wait,s
 system             /system         ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey:/avb/t-gsi.avbpubkey
 
 # System_ext Partitions
-system_ext         /system_ext     erofs   ro                             wait,slotselect,logical,nofail
-system_ext         /system_ext     ext4    ro,barrier=1,discard           wait,slotselect,logical,nofail
+system_ext         /system_ext     erofs   ro                             wait,slotselect,avb=vbmeta_system,logical,nofail
+system_ext         /system_ext     ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,nofail
 
 # Product Partitions 
-product            /product        erofs   ro                             wait,slotselect,logical,nofail
-product            /product        ext4    ro,barrier=1,discard           wait,slotselect,logical,nofail
+product            /product        erofs   ro                             wait,slotselect,avb=vbmeta_system,logical,nofail
+product            /product        ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,nofail
 
 # Vendor Partitions
-vendor             /vendor         erofs   ro                             wait,slotselect,logical
-vendor             /vendor         ext4    ro,barrier=1,discard           wait,slotselect,logical
+vendor             /vendor         erofs   ro                             wait,slotselect,avb=vbmeta_vendor,logical
+vendor             /vendor         ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_vendor,logical
