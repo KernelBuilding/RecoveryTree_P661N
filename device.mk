@@ -59,6 +59,7 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 PRODUCT_PACKAGES += \
+    otapreopt_script \
     update_engine \
     update_verifier \
     update_engine_sideload \
