@@ -202,16 +202,16 @@ TW_DEFAULT_BRIGHTNESS := 500
 TW_MAX_BRIGHTNESS := 2047
 
 # Fix Battery Accurate
-TW_NO_BATT_PERCENT := true
-TW_NO_CPU_TEMP := true
+TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone1/temp"
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-TWRP_EVENT_LOGGING := true
 
 # Statusbar icon flags
 TW_STATUS_ICONS_ALIGN := center
+TW_CUSTOM_CPU_POS := 400
 TW_CUSTOM_CLOCK_POS := 60
 
 # Maintainer/Version
