@@ -19,6 +19,19 @@ The Itel P55 5G (codenamed: _P661N_) is a low-entry smartphone launched in 26 Se
 | Rear camera 1           | 50MP AF                             |
 | Selfie camera           | 8MP                   |
 
+#### What works in this recovery tree?
+1. Decrypt Data Work
+2. Flash System & Vendor Support
+3. Format Data Work
+4. All Partition Mounted Success
+5. Battery Percent Accurate
+6. Can Flash Zip Files (Custom Rom)
+
+#### What bug on this recovery tree?
+1. Cannot Flash Magisk.zip
+2. Touch Not Working If Entering Recovery via combination button
+3. Cannot Boot On GSI
+
 ## Itel P55 5G
 
 ![image](https://fdn2.gsmarena.com/vv/pics/itel/itel-power-55-2.jpg)
