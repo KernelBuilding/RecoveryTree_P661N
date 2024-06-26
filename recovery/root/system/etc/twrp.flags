@@ -24,7 +24,7 @@
 /persist         ext4    /dev/block/by-name/persist            flags=backup=1;display="Persist"
 
 # storage
-/data           f2fs     /dev/block/by-name/userdata
+/data    m       f2fs     /dev/block/by-name/userdata
 
 # Other Partition
 /boot_para       emmc    /dev/block/by-name/boot_para
@@ -39,6 +39,12 @@
 /system_image          emmc      /dev/block/mapper/system_a     /dev/block/mapper/system_b                  flags=display="System Image";backup=1;flashimg=1
 /system_ext_image      emmc      /dev/block/mapper/system_ext_a /dev/block/mapper/system_ext_b              flags=display="System_ext Image";backup=1;flashimg=1
 /vendor_image          emmc      /dev/block/mapper/vendor_a     /dev/block/mapper/vendor_b                  flags=display="Vendor Image";backup=1;flashimg=1
+
+# Dynamic Partitions Wipe Support
+/product_erofs         auto      /dev/block/mapper/product_a    /dev/block/mapper/product_b                 flags=display="Product";wipeingui
+/system_erofs          auto      /dev/block/mapper/system_a     /dev/block/mapper/system_b                  flags=display="System";wipeingui
+/system_ext_erofs      auto      /dev/block/mapper/system_ext_a /dev/block/mapper/system_ext_b              flags=display="System_ext";wipeingui
+/vendor_erofs          auto      /dev/block/mapper/vendor_a     /dev/block/mapper/vendor_b                  flags=display="Vendor";wipeingui
 
 # Removable storage
 /external_sd     auto     /dev/block/mmcblk0p1    /dev/block/mmcblk0   flags=display="Micro SDcard";storage;wipeingui;removable
