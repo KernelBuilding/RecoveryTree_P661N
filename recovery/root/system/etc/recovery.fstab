@@ -4,10 +4,10 @@
 /dev/block/by-name/misc         /misc         emmc   defaults   defaults
 
 # Dynamic Partitions
-system             /system         erofs   ro                             wait,slotselect,avb=vbmeta_system,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey:/avb/t-gsi.avbpubkey
-system             /system         ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey:/avb/t-gsi.avbpubkey
-system_root        /system         erofs   ro                             wait,slotselect,avb=vbmeta_system,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey:/avb/t-gsi.avbpubkey
-system_root        /system         ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey:/avb/t-gsi.avbpubkey
+system             /system         erofs   rw                             wait,slotselect,avb=vbmeta_system,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey:/avb/t-gsi.avbpubkey
+system             /system         ext4    rw,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey:/avb/t-gsi.avbpubkey
+system_root        /system         erofs   rw                             wait,slotselect,avb=vbmeta_system,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey:/avb/t-gsi.avbpubkey
+system_root        /system         ext4    rw,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey:/avb/t-gsi.avbpubkey
 system_ext         /system_ext     erofs   ro                             wait,slotselect,avb=vbmeta_system,logical,nofail
 system_ext         /system_ext     ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,nofail 
 product            /product        erofs   ro                             wait,slotselect,avb=vbmeta_system,logical,nofail
