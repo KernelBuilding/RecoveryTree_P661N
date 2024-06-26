@@ -24,7 +24,7 @@
 /persist         ext4    /dev/block/by-name/persist            flags=backup=1;display="Persist"
 
 # storage
-/data    m       f2fs     /dev/block/by-name/userdata
+/data            f2fs     /dev/block/by-name/userdata
 
 # Other Partition
 /boot_para       emmc    /dev/block/by-name/boot_para
