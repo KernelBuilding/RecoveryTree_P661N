@@ -170,6 +170,9 @@ TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
 TW_HAS_NO_RECOVERY_PARTITION := true
 
+# Set Recovery Refresh Rate
+TW_FRAMERATE := 90
+
 # Excludes
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_TWRP_APP := true
