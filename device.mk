@@ -66,6 +66,8 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     checkpoint_gc
 
+PRODUCT_PACKAGES += libgflags
+
 # Recovery modules
 TARGET_RECOVERY_DEVICE_MODULES += \
     libresetprop \
