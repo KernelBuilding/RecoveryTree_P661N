@@ -18,7 +18,6 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 
 # Virtual A/B Partition 
 AB_OTA_UPDATER := true
