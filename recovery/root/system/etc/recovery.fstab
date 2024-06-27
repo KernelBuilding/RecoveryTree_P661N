@@ -4,13 +4,13 @@
 /dev/block/by-name/misc         /misc         emmc   defaults   defaults
 
 # Core Partitions (erofs)
-system             /system         erofs   ro            wait,slotselect,avb=vbmeta_system,logical,avb_keys=/first_stage_ramdisk/avb/q-gsi.avbpubkey:/first_stage_ramdisk/avb/r-gsi.avbpubkey:/first_stage_ramdisk/avb/s-gsi.avbpubkey:/first_stage_ramdisk/avb/t-gsi.avbpubkey
+system             /system         erofs   ro            wait,slotselect,avb=vbmeta_system,logical,avb_keys=/first_stage_ramdisk/avb/q-gsi.avbpubkey:/first_stage_ramdisk/avb/r-gsi.avbpubkey:/first_stage_ramdisk/avb/s-gsi.avbpubkey
 system_ext         /system_ext     erofs   ro            wait,slotselect,avb=vbmeta_system,logical,nofail
 product            /product        erofs   ro            wait,slotselect,avb=vbmeta_system,logical,nofail
 vendor             /vendor         erofs   ro            wait,slotselect,avb=vbmeta_vendor,logical
 
 # Core Partitions (ext4)
-system             /system         ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,avb_keys=/first_stage_ramdisk/avb/q-gsi.avbpubkey:/first_stage_ramdisk/avb/r-gsi.avbpubkey:/first_stage_ramdisk/avb/s-gsi.avbpubkey:/first_stage_ramdisk/avb/t-gsi.avbpubkey
+system             /system         ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,avb_keys=/first_stage_ramdisk/avb/q-gsi.avbpubkey:/first_stage_ramdisk/avb/r-gsi.avbpubkey:/first_stage_ramdisk/avb/s-gsi.avbpubkey
 system_ext         /system_ext     ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,nofail
 product            /product        ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_system,logical,nofail
 vendor             /vendor         ext4    ro,barrier=1,discard           wait,slotselect,avb=vbmeta_vendor,logical
