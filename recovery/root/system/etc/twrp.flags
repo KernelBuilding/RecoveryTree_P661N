@@ -1,8 +1,7 @@
 # mount point   fstype            device             device2                 flags
 /boot            emmc    /dev/block/by-name/boot               flags=backup=1;display="Boot";flashimg=1;slotselect
-/bootloader      emmc    /dev/block/by-name/lk                 flags=display="Bootloader";backup=1;slotselect
 /dtbo            emmc    /dev/block/by-name/dtbo               flags=backup=1;display="Dtbo";flashimg=1;slotselect
-
+   
 # Dynamic Partition (SUPER)
 /super	         emmc    /dev/block/by-name/super              flags=backup=0;display="Super";flashimg=1
 
@@ -33,12 +32,21 @@
 /vendor_boot     emmc    /dev/block/by-name/vendor_boot        flags=display="Vendor Boot";flashimg=1;backup=1;slotselect
 /tranfs          ext4    /dev/block/by-name/tranfs             flags=display="tranfs"
 /spmfw           emmc    /dev/block/by-name/spmfw              flags=slotselect;
+/lk              emmc    /dev/block/by-name/bootloader1        flags=display="lk";backup=1;flashimg=1
+/lk2             emmc    /dev/block/by-name/bootloader2        flags=display="lk2";backup=1;flashimg=1
+/gz1             emmc    /dev/block/by-name/gz_a    
+/gz2             emmc    /dev/block/by-name/gz_b                
+/tee1            emmc    /dev/block/by-name/tee_a
+/tee2            emmc    /dev/block/by-name/tee_b
+/otp             emmc    /dev/block/by-name/otp    
+/scp1            emmc    /dev/block/by-name/scp_a          
+/scp2            emmc    /dev/block/by-name/scp_b      
 
 # Dynamic Partitions ( A/B Slots )
-/product_image         emmc      /dev/block/mapper/product_a    /dev/block/mapper/product_b                 flags=display="Product Image";backup=1;flashimg=1
-/system_image          emmc      /dev/block/mapper/system_a     /dev/block/mapper/system_b                  flags=display="System Image";backup=1;flashimg=1
-/system_ext_image      emmc      /dev/block/mapper/system_ext_a /dev/block/mapper/system_ext_b              flags=display="System_ext Image";backup=1;flashimg=1
-/vendor_image          emmc      /dev/block/mapper/vendor_a     /dev/block/mapper/vendor_b                  flags=display="Vendor Image";backup=1;flashimg=1
+/product_image         emmc      /dev/block/mapper/product                 flags=display="Product Image";backup=1;flashimg=1;slotselect
+/system_image          emmc      /dev/block/mapper/system                  flags=display="System Image";backup=1;flashimg=1;slotselect
+/system_ext_image      emmc      /dev/block/mapper/system_ext              flags=display="System_ext Image";backup=1;flashimg=1;slotselect
+/vendor_image          emmc      /dev/block/mapper/vendor                  flags=display="Vendor Image";backup=1;flashimg=1;slotselect
 
 # Removable storage
 /external_sd     auto     /dev/block/mmcblk0p1    /dev/block/mmcblk0   flags=display="Micro SDcard";storage;wipeingui;removable
