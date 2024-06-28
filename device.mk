@@ -12,7 +12,7 @@ PRODUCT_PLATFORM := mt6833
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # API level
-PRODUCT_TARGET_VNDK_VERSION := 33
+PRODUCT_TARGET_VNDK_VERSION := 31
 PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Virtual A/B
@@ -41,11 +41,17 @@ PRODUCT_PACKAGES += \
 # Boot Control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery
+    android.hardware.boot@1.2-mtkimpl.recovery \
+    bootctrl
 
 PRODUCT_PACKAGES += \
     bootctrl.mt6833 \
     bootctrl.mt6833.recovery
+
+# MTK PlPath Utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils \
+    mtk_plpath_utils.recovery
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -53,17 +59,14 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 PRODUCT_PACKAGES_DEBUG += \
+    bootctrl \
     update_engine_client
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
     update_engine \
     update_verifier \
-    update_engine_sideload \
-    checkpoint_gc
+    update_engine_sideload
 
 # Recovery modules
 TARGET_RECOVERY_DEVICE_MODULES += \
