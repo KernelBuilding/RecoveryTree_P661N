@@ -32,8 +32,8 @@
 /vendor_boot     emmc    /dev/block/by-name/vendor_boot        flags=display="Vendor Boot";flashimg=1;backup=1;slotselect
 /tranfs          ext4    /dev/block/by-name/tranfs             flags=display="tranfs"
 /spmfw           emmc    /dev/block/by-name/spmfw              flags=slotselect;
-/lk              emmc    /dev/block/by-name/bootloader1        flags=display="lk";backup=1;flashimg=1
-/lk2             emmc    /dev/block/by-name/bootloader2        flags=display="lk2";backup=1;flashimg=1
+/lk              emmc    /dev/block/by-name/lk_a               flags=display="lk";backup=1;flashimg=1
+/lk2             emmc    /dev/block/by-name/lk_b               flags=display="lk2";backup=1;flashimg=1
 /gz1             emmc    /dev/block/by-name/gz_a    
 /gz2             emmc    /dev/block/by-name/gz_b                
 /tee1            emmc    /dev/block/by-name/tee_a
