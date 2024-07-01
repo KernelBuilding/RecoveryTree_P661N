@@ -59,7 +59,6 @@ BOARD_KERNEL_IMAGE_NAME := kernel
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery  # TODO: Used in other device tree. Do we need it?
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --board $(BOARD_NAME)
